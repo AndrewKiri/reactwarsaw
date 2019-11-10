@@ -1,6 +1,9 @@
 {
   "name": "staging",
-  "script": "npm -- start",
+  "script": "npm",
+  "args": [
+    "start"
+  ],
   "env": {
     "NODE_ENV": "development"
   },
