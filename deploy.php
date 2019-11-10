@@ -47,7 +47,7 @@ task('npm', function () {
     cd('~/{{application}}/{{stage}}/current');
     run('yarn install');
     run('yarn build');
-    run('pm2 restart {{stage}}.config.json --env production');
+    run('pm2 reload {{stage}}.config.json --env production');
 });
 
 task('deploy', [
