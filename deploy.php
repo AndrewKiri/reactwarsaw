@@ -49,6 +49,23 @@ task('npm', function () {
     run('yarn build');
 });
 
+task('deploy', [
+    'deploy:info',
+    'deploy:prepare',
+    'deploy:lock',
+    'deploy:release',
+    'deploy:update_code',
+    'deploy:shared',
+    'deploy:writable',
+    'artisan:storage:link',
+    'artisan:view:cache',
+    'artisan:config:cache',
+    'artisan:optimize',
+    'deploy:symlink',
+    'deploy:unlock',
+    'cleanup',
+]);
+
 after('deploy:unlock', 'npm');
 
 // [Optional] if deploy fails automatically unlock.
