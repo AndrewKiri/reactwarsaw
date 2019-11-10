@@ -49,7 +49,7 @@ production build:
     - composer install
     - yarn install
     - yarn build
-    - vendor/bin/dep deploy staging
+    - vendor/bin/dep deploy production
   environment:
     name: production
     url: https://reactday.pl
