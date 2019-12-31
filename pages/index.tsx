@@ -5,6 +5,7 @@ const Home: NextPage = () => (
   <Layout>
     <h1>React Warsaw</h1>
     <h2>Coming soon</h2>
+    <h3>test 123</h3>
   </Layout>
 )
 
